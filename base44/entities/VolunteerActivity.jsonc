@@ -1,0 +1,38 @@
+{
+  "name": "VolunteerActivity",
+  "type": "object",
+  "properties": {
+    "volunteer_email": {
+      "type": "string"
+    },
+    "activity_type": {
+      "type": "string",
+      "enum": [
+        "prayer",
+        "training",
+        "mentoring",
+        "outreach",
+        "other"
+      ],
+      "default": "prayer"
+    },
+    "duration_minutes": {
+      "type": "number",
+      "default": 15
+    },
+    "prayer_request_id": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "volunteer_email",
+    "activity_type"
+  ]
+}

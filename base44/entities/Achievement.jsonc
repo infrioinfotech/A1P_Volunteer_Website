@@ -1,0 +1,38 @@
+{
+  "name": "Achievement",
+  "type": "object",
+  "properties": {
+    "volunteer_email": {
+      "type": "string"
+    },
+    "badge_type": {
+      "type": "string",
+      "enum": [
+        "first_prayer",
+        "prayer_warrior_10",
+        "prayer_warrior_50",
+        "prayer_warrior_100",
+        "faithful_week",
+        "faithful_month",
+        "answered_witness_5",
+        "answered_witness_25",
+        "community_builder",
+        "referral_champion",
+        "training_complete"
+      ],
+      "description": "Type of achievement badge"
+    },
+    "earned_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "is_celebrated": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "volunteer_email",
+    "badge_type"
+  ]
+}

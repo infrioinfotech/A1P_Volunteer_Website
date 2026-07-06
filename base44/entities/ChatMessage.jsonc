@@ -1,0 +1,29 @@
+{
+  "name": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "sender_email": {
+      "type": "string"
+    },
+    "sender_name": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "channel": {
+      "type": "string",
+      "enum": [
+        "general",
+        "prayer_requests",
+        "encouragement",
+        "testimonies"
+      ],
+      "default": "general"
+    }
+  },
+  "required": [
+    "sender_email",
+    "message"
+  ]
+}

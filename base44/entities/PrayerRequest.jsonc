@@ -1,0 +1,55 @@
+{
+  "name": "PrayerRequest",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Brief title for the prayer request"
+    },
+    "description": {
+      "type": "string",
+      "description": "Details of the prayer request"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "answered",
+        "closed"
+      ],
+      "default": "active"
+    },
+    "is_anonymous": {
+      "type": "boolean",
+      "default": true
+    },
+    "prayer_count": {
+      "type": "number",
+      "default": 0
+    },
+    "answered_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "testimony": {
+      "type": "string",
+      "description": "Testimony when prayer is answered"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "health",
+        "family",
+        "financial",
+        "spiritual",
+        "career",
+        "relationships",
+        "other"
+      ],
+      "default": "other"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}
