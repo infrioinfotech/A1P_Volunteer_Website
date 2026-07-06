@@ -62,8 +62,8 @@ export default function Layout({ children, currentPageName }) {
         <div className="p-6 border-b border-slate-100">
           <Link to={createPageUrl('Dashboard')} className="flex items-center gap-2">
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=100&fit=crop" 
-              alt="Anyone Pray" 
+              src="/src/public/a1p-logo.svg" 
+              alt="A1P" 
               className="h-10 w-auto object-contain"
             />
           </Link>
@@ -135,8 +135,8 @@ export default function Layout({ children, currentPageName }) {
         <div className="flex items-center justify-between h-full px-4">
           <Link to={createPageUrl('Dashboard')} className="flex items-center gap-2">
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=100&fit=crop" 
-              alt="Anyone Pray" 
+              src="/src/public/a1p-logo.svg" 
+              alt="A1P" 
               className="h-8 w-auto object-contain"
             />
           </Link>
@@ -150,8 +150,8 @@ export default function Layout({ children, currentPageName }) {
             <SheetContent side="right" className="w-72 p-0">
               <div className="p-6 border-b border-slate-100">
                 <img 
-                  src="https://media.base44.com/images/public/69839aaa97942a9b7bd849fc/618a5e4c0_MailerLiteHeader_900x300.png" 
-                  alt="Anyone Pray" 
+                  src="/src/public/a1p-logo.svg" 
+                  alt="A1P" 
                   className="h-9 w-auto object-contain"
                 />
               </div>

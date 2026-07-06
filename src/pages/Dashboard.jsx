@@ -79,15 +79,36 @@ export default function Dashboard() {
   return (
     <div className="p-4 md:p-8 space-y-6">
       <WelcomeHero user={user || dummyUser} stats={dummyStats} />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <NewsSection announcements={dummyAnnouncements} />
-        <ActivityTracker activities={dummyActivities} />
-        <AchievementsBadges achievements={dummyAchievements} stats={dummyStats} />
-        <AnsweredPrayers prayers={dummyPrayers} />
-        <ImpactStories stories={dummyStories} />
-        <CalendarWidget events={dummyEvents} />
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Left column (2/3 width on lg) */}
+        <div className="lg:col-span-2 space-y-6">
+          {/* Row 1: Personal Goal & Answered Prayers */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <ActivityTracker activities={dummyActivities} />
+            <AnsweredPrayers prayers={dummyPrayers} />
+          </div>
+          {/* Row 2: Calendar & Badges Earned */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <CalendarWidget events={dummyEvents} />
+            <AchievementsBadges achievements={dummyAchievements} stats={dummyStats} />
+          </div>
+          {/* Row 3: What's New */}
+          <NewsSection announcements={dummyAnnouncements} />
+        </div>
+        
+        {/* Right column (1/3 width on lg) */}
+        <div className="space-y-6">
+          {/* Invite Friends 80% height, Impact Stories 20% height */}
+          <div className="flex flex-col gap-6 h-full">
+            <div className="flex-grow-4">
+              <ReferralProgram referrals={dummyReferrals} userEmail={(user || dummyUser).email} />
+            </div>
+            <div className="flex-grow-1">
+              <ImpactStories stories={dummyStories} />
+            </div>
+          </div>
+        </div>
       </div>
-      <ReferralProgram referrals={dummyReferrals} userEmail={(user || dummyUser).email} />
     </div>
   );
 }
