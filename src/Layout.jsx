@@ -12,7 +12,7 @@ import {
   LogOut,
   ChevronRight,
   Shield,
-  UserSwitch
+  Repeat
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -122,7 +122,7 @@ export default function Layout({ children, currentPageName }) {
                 className="w-full"
                 onClick={switchUser}
               >
-                <UserSwitch className="w-4 h-4 mr-2" />
+                <Repeat className="w-4 h-4 mr-2" />
                 Switch to {user.role === 'admin' ? 'Volunteer' : 'Admin'}
               </Button>
             </div>
@@ -210,7 +210,7 @@ export default function Layout({ children, currentPageName }) {
                         setMobileOpen(false);
                       }}
                     >
-                      <UserSwitch className="w-4 h-4 mr-2" />
+                      <Repeat className="w-4 h-4 mr-2" />
                       Switch to {user.role === 'admin' ? 'Volunteer' : 'Admin'}
                     </Button>
                   </div>
